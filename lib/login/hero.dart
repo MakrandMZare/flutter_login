@@ -25,14 +25,14 @@ class HeroWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Flutter',
+                    Text('Anantt',
                         style: GoogleFonts.spaceGrotesk(
                           foreground: Paint()..shader = linearGradient,
                           fontSize: 80,
                           height: 0.8,
                           fontWeight: FontWeight.w800,
                         )),
-                    Text('Sample App',
+                    Text('FA Automation',
                         style: GoogleFonts.spaceGrotesk(
                           fontSize: 80,
                           height: 0.8,

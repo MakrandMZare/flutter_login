@@ -12,7 +12,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:sample/example_app.dart';
+import 'package:flutter_login/login/login_page.dart';
 
 import 'widget_test.mocks.dart';
 
@@ -24,8 +24,7 @@ AUTH0_CLIENT_ID=bar
   final mockedWebAuth = MockWebAuthentication();
   final mocked = MockAuth0();
 
-  testWidgets('can execute login flow',
-      (WidgetTester tester) async {
+  testWidgets('can execute login flow', (WidgetTester tester) async {
     when(mocked.webAuthentication()).thenReturn(mockedWebAuth);
     when(mockedWebAuth.login(
       audience: anyNamed('audience'),
@@ -47,7 +46,7 @@ AUTH0_CLIENT_ID=bar
           'tokenType': 'Bearer'
         })));
 
-    await tester.pumpWidget(ExampleApp(auth0: mocked));
+    await tester.pumpWidget(LoginPage(auth0: mocked));
 
     final loginButton = find.text('Login');
 

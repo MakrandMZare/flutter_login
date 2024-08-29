@@ -8,15 +8,15 @@ import 'constants.dart';
 import 'hero.dart';
 import 'user.dart';
 
-class ExampleApp extends StatefulWidget {
+class LoginPage extends StatefulWidget {
   final Auth0? auth0;
-  const ExampleApp({this.auth0, super.key});
+  const LoginPage({this.auth0, super.key});
 
   @override
-  State<ExampleApp> createState() => _ExampleAppState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _ExampleAppState extends State<ExampleApp> {
+class _LoginPageState extends State<LoginPage> {
   UserProfile? _user;
 
   late Auth0 auth0;

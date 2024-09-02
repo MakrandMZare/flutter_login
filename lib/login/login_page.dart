@@ -3,10 +3,12 @@ import 'package:auth0_flutter/auth0_flutter_web.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_login/utils/routes.dart';
 
 import 'constants.dart';
 import 'hero.dart';
 import 'user.dart';
+import 'view.dart';
 
 class LoginPage extends StatefulWidget {
   final Auth0? auth0;
@@ -104,15 +106,17 @@ class _LoginPageState extends State<LoginPage> {
                   child: const Text('Logout'),
                 )
               : ElevatedButton(
+                  style: TextButton.styleFrom(minimumSize: const Size(150, 40)),
                   onPressed: login,
-                  style: ButtonStyle(
-                    backgroundColor:
-                        WidgetStateProperty.all<Color>(Colors.black),
-                  ),
-                  child: const Text('Login'),
-                )
+                    Navigator.pushNamed{(context, MyRoutes.viewRoute)}, child: const Text('Login');
+                      void main() {
+     runApp(const MaterialApp(home: MyAppHome()));
+  },
+                  },
+                ),
         ]),
-      )),
+        ),
+      ),
     );
   }
 }

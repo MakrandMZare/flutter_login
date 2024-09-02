@@ -29,7 +29,7 @@ class HeroWidget extends StatelessWidget {
                         style: GoogleFonts.spaceGrotesk(
                           foreground: Paint()..shader = linearGradient,
                           fontSize: 80,
-                          height: 0.8,
+                          height: 1.0,
                           fontWeight: FontWeight.w800,
                         )),
                     Text('FA Automation',
